@@ -1,3 +1,7 @@
-.git
-.idea
-.env
+**/.git
+**/.env
+**/venv
+**/.idea
+Dockerfile
+README.md
+docker-compose.yml

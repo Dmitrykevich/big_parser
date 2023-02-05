@@ -8,7 +8,7 @@ from __future__ import absolute_import
 import os
 from celery import Celery
 
-from project.core_app.settings import INSTALLED_APPS
+from core_app.settings import INSTALLED_APPS
 
 # this code copied from manage.py
 # set the default Django settings module for the 'celery' app.

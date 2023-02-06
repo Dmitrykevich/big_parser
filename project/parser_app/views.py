@@ -11,11 +11,11 @@ def task(request):
     if request.method == 'POST':
         if "type" in request.data:
             category_name = request.data["type"]
-            task = create_task.delay(category_name) # create celery task
-            return Response({"message": "Create task", "task_id": task.id, "data": request.data})
+            task = create_task.delay(category_name)  # create celery task
+            return Response({"message": "create task", "task_id": task.id, "data": request.data})
         else:
             return Response({"message": "Error, not found 'type' in POST request"})
-    if request.method == 'GET': # get task status
+    if request.method == 'GET':  # get task status
         if "task_id" in request.data:
             task_id = request.data["task_id"]
             task_result = AsyncResult(task_id)

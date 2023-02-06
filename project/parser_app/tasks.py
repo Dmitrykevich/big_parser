@@ -1,12 +1,9 @@
 import requests
 import time
-
 from lxml import etree
 from datetime import datetime
 from parser_app.models import BaseTask, BaseParsingResult
-from core_app.celery import app
-
-from django.core.cache import cache
+from parser_app.celery import app
 
 
 def parse_data(celery_task_id: str, category_name: str):
